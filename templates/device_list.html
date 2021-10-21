@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+Device List
+{% endblock %}
+
+{% block content %}
+<h1>Devices</h1>
+<p>
+  <ul>
+    {% for id, device in devices.items() %}
+    <li>
+      {{ device.friendlyName }}
+    </li>
+    {% endfor %}
+  </ul>
+</p>
+
+{% endblock %}
